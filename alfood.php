@@ -84,7 +84,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                     sleep(5);
                     echo "\n";
                     
-                $cekvoucher = request('https://api.gojekapi.com/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
+                $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
                 $total = fetch_value($cekvoucher,'"total_vouchers":',',');
                 $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
                 $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
