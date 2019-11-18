@@ -55,8 +55,6 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 if($claims->success == true) 
                         {
                                 // Claim Voucher
-                                $token = $verifs->data->access_token;
-                                $headers[] = 'Authorization: Bearer '.$token;
                                 $live2 = "santai19";
                                 $fopen2 = fopen($live2, "a+");
                                 $fwrite2 = fwrite($fopen2, "TOKEN => ".$token." \n");
