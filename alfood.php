@@ -52,6 +52,16 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 $data3 = '{"promo_code":"GOFOODSANTAI19"}';
                 $claim = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data3, $headers);
                 $claims = json_decode($claim[0]); 
+                if($claims->success == true) 
+                        {
+                                // Claim Voucher
+                                $token = $verifs->data->access_token;
+                                $headers[] = 'Authorization: Bearer '.$token;
+                                $live2 = "santai19";
+                                $fopen2 = fopen($live2, "a+");
+                                $fwrite2 = fwrite($fopen2, "TOKEN => ".$token." \n");
+                                fclose($fopen2);
+                        }
                     echo "\e[92m [✓]".$claims->data->message;
                     sleep(5);
                     echo "\n";
