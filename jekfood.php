@@ -15,14 +15,16 @@ function color($color = "default" , $text)
         return "\033[".$arrayColor[$color]."m".$text."\033[0m";
     }
     
-function fetch_value($str,$find_start,$find_end) {
-    $start = @strpos($str,$find_start);
-    if ($start === false) {
-        return "";
+function fetch_value($str,$find_start,$find_end) 
+    {
+        $start = @strpos($str,$find_start);
+        if ($start === false) {
+            return "";
+            }
+        $length = strlen($find_start);
+        $end    = strpos(substr($str,$start +$length),$find_end);
+        return trim(substr($str,$start +$length,$end));
     }
-    $length = strlen($find_start);
-    $end    = strpos(substr($str,$start +$length),$find_end);
-    return trim(substr($str,$start +$length,$end));
 
 $secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e';
 $headers = array();
