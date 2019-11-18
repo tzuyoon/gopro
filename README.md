@@ -2,12 +2,12 @@
 
 install
 
-pkg install curl
+  $pkg install curl
 
-pkg install php
+  $pkg install php
 
-pkg install git
+  $pkg install git
 
-git clone https://github.com/megatruh/malproject
+  $git clone https://github.com/megatruh/malproject
 
-use ~> php jekfood.php
+use ~> $php jekfood.php
