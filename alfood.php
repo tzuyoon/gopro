@@ -93,15 +93,8 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
                 $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
                 $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
-                echo "\n".color("yellow","!] Total voucher ".$total." : ");
-                echo "\n".color("green","1] ".$voucher1);
-                echo "\n".color("green","2] ".$voucher2);
-                echo "\n".color("green","3] ".$voucher3);
-                echo "\n".color("green","4] ".$voucher4);
-                echo "\n".color("green","5] ".$voucher5);
-                echo "\n".color("green","6] ".$voucher6);
-                echo "\n".color("green","7] ".$voucher7);
-                echo"\n";
+                
+                
                 $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
                 $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
                 $expired3 = getStr1('"expiry_date":"','"',$cekvoucher,'3');
@@ -109,6 +102,24 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 $expired5 = getStr1('"expiry_date":"','"',$cekvoucher,'5');
                 $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
                 $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
+                    
+                
+                echo "\n".color("yellow","!] Total voucher ".$total." : ");
+                echo "\n".color("green","1] ".$voucher1);
+                echo "\n".color("red"," EXP ~> ".$expired1);
+                echo "\n".color("green","2] ".$voucher2);
+                echo "\n".color("red"," EXP ~> ".$expired2);
+                echo "\n".color("green","3] ".$voucher3);
+                echo "\n".color("red"," EXP ~> ".$expired3);
+                echo "\n".color("green","4] ".$voucher4);
+                echo "\n".color("red"," EXP ~> ".$expired4);
+                echo "\n".color("green","5] ".$voucher5);
+                echo "\n".color("red"," EXP ~> ".$expired5);
+                echo "\n".color("green","6] ".$voucher6);
+                echo "\n".color("red"," EXP ~> ".$expired6);
+                echo "\n".color("green","7] ".$voucher7);
+                echo "\n".color("red"," EXP ~> ".$expired7);
+                echo"\n";
 
 }
                     
