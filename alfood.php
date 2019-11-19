@@ -16,6 +16,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
         echo "\e[92m|                    GOODLUCK                    |\n";
         echo "\e[92m--------------------------------------------------\n";
         echo "\n";
+        ulang:
         echo "\e[96m[+] Input Nomor HP : ";
         $number = trim(fgets(STDIN));
         $numbers = $number[0].$number[1];
@@ -33,6 +34,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
         $regs = json_decode($reg[0]);
         // Verif OTP
         if($regs->success == true) {
+            otp:
             echo "\e[93m[+] Input OTP : ";
             $otp = trim(fgets(STDIN));
             $data2 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $regs->data->otp_token . '"},"client_secret":"' . $secret . '"}';
@@ -48,7 +50,9 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 fclose($fopen1);
                 echo "Token ~> ".$token." \n";
                 echo "\e[92m[+] Token Tersimpan di ~> ".$live." \n\n";
-                   echo "\e[96m[!] Proses Reedem Voucher 20+10 : GOFOODSANTAI19 \n";
+                
+                // SANTAI19
+                echo "\e[96m[!] Proses Reedem Voucher 20+10 : GOFOODSANTAI19 \n";
                 $data3 = '{"promo_code":"GOFOODSANTAI19"}';
                 $claim = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data3, $headers);
                 $claims = json_decode($claim[0]); 
@@ -59,36 +63,83 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                 $fopen2 = fopen($live2, "a+");
                                 $fwrite2 = fwrite($fopen2, "TOKEN => ".$token." \n");
                                 fclose($fopen2);
-                        }
-                    echo "\e[92m [✓]".$claims->data->message;
-                    sleep(5);
-                    echo "\n";
-                echo "\e[96m[!] Proses Reedem Voucher 15+10 : GOFOODSANTAI11 \n";
-                $data4 = '{"promo_code":"GOFOODSANTAI11"}';
-                $claim1 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data4, $headers);
-                $claims1 = json_decode($claim1[0]);
-                    echo "\e[92m [✓]".$claims1->data->message;
-                    sleep(5);
-                    echo "\n";
-                echo "\e[96m[!] Proses Redeem Voucher 10+10 : GOFOODSANTAI08 \n";
-                $data5 = '{"promo_code":"GOFOODSANTAI08"}';
-                $claim2 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data5, $headers);
-                $claims2 = json_decode($claim2[0]);
-                    echo "\e[92m [✓]".$claims2->data->message;
-                    sleep(5);
-                    echo "\n";
+                                echo "\e[92m [✓]".$claims->data->message."  [•] Token Tersimpan di ~> ".$live2;
+                        } 
+                        else 
+                            {
+                                echo "\e[91m [×] Gagal Claim Voucer !"
+                                    sleep(5);
+                                    echo "\n";
+
+                                    // SANTAI11
+                                        echo "\e[96m[!] Proses Reedem Voucher 15+10 : GOFOODSANTAI11 \n";
+                                        $data4 = '{"promo_code":"GOFOODSANTAI11"}';
+                                        $claim1 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data4, $headers);
+                                        $claims1 = json_decode($claim1[0]);
+                                        if($claims1->success == true) 
+                                                {
+                                                        // Claim Voucher
+                                                        $live3 = "santai11";
+                                                        $fopen3 = fopen($live3, "a+");
+                                                        $fwrite3 = fwrite($fopen3, "TOKEN => ".$token." \n");
+                                                        fclose($fopen3);
+                                                        echo "\e[92m [✓]".$claims1->data->message."  [•] Tersimpan di ~> ".$live3;
+                                                } else 
+                                                    {
+                                                        echo "\e[91m [×] Gagal Claim Voucer !"
+                                                            sleep(5);
+                                                            echo "\n";
+
+                                                            // SANTAI08
+                                                                echo "\e[96m[!] Proses Redeem Voucher 10+10 : GOFOODSANTAI08 \n";
+                                                                $data5 = '{"promo_code":"GOFOODSANTAI08"}';
+                                                                $claim2 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data5, $headers);
+                                                                $claims2 = json_decode($claim2[0]);
+                                                                if($claims2->success == true) 
+                                                                        {
+                                                                                // Claim Voucher
+                                                                                $live4 = "santai08";
+                                                                                $fopen4 = fopen($live4, "a+");
+                                                                                $fwrite4 = fwrite($fopen4, "TOKEN => ".$token." \n");
+                                                                                fclose($fopen4);
+                                                                                echo "\e[92m [✓]".$claims2->data->message." [•] Tersimpan di ~> ".$live4;
+                                                                        } else 
+                                                                            {
+                                                                                echo "\e[91m [×] Gagal Claim Voucer !"
+                                                                            }
+
+                                                    }
+
+                            }
+
+                sleep(5);
+                echo "\n";
                 echo "\e[96m[!] Proses Redeem Vocher : COBAINGOJEK \n";
                 $data6 = '{"promo_code":"COBAINGOJEK"}';
                 $claim3 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data6, $headers);
-                $claims3 = json_decode($claim2[0]);
-                    echo "\e[92m [✓]".$claims2->data->message;
-                    sleep(5);
-                    echo "\n";
+                $claims3 = json_decode($claim3[0]);
+                if($claims3->success == true)
+                        {
+                                echo "\e[92m [✓]".$claims3->data->message;
+                        } else
+                            {
+                                echo "\e[91m [×] Gagal Claim Voucer !"
+
+                            }
+                sleep(5);
+                echo "\n";
                 echo "\e[96m[+] Proses Redeem Vocher : AYOCOBAGOJEK \n";
                 $data7 = '{"promo_code":"AYOCOBAGOJEK"}';
                 $claim4 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data7, $headers);
-                $claims4 = json_decode($claim2[0]);
-                    echo "\e[92m [✓]".$claims2->data->message;
+                $claims4 = json_decode($claim4[0]);
+                if($claims4->success == true)
+                        {
+                                echo "\e[92m [✓]".$claims4->data->message;
+                        } else
+                            {
+                                echo "\e[91m [×] Gagal Claim Voucer !"
+
+                            }
                     sleep(5);
                     echo "\n";
                     
@@ -129,9 +180,24 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 echo "\n".color("red"," EXP ~> ".$expired7);
                 echo"\n";
 
-}
+}else
+    {
+        echo color("red","[x] Otp yang anda input salah");
+        echo"\n==================================\n\n";
+        echo color("yellow","!] Silahkan input kembali\n");
+        goto otp;
+    }
                     
-                    }
+                } else
+                    {
+                        echo color("red","[x] Nomor sudah teregistrasi");
+                        echo"\n==================================\n\n";
+                        echo color("yellow","!] Silahkan registrasi kembali\n");
+                        goto ulang;
+                    }   
+
+
+
 
 function request($url, $token = null, $data = null, $pin = null, $otpsetpin = null, $uuid = null)
     {
