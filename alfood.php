@@ -9,8 +9,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 
         echo "\n";
         echo "\e[92m--------------------------------------------------\n";
-        echo "\e[92m|                  RE-CODE BY AL                 |\n";
-        echo "\e[92m|            Komunitas Tumbuh Bersama            |\n";
+        echo "\e[92m|              SCRIPT BY ALFARKHAN               |\n";
         echo "\e[92m|     https://github.com/megatruh/malproject/    |\n";
         echo "\e[92m|   SCRIPT GOJEK AUTO REGIST + AUTO SAVE TOKEN   |\n";
         echo "\e[92m|                    GOODLUCK                    |\n";
@@ -182,17 +181,17 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 
 }else
     {
-        echo color("red","[x] Otp yang anda input salah");
+        echo color("red","[×] Otp yang anda input salah");
         echo"\n==================================\n\n";
-        echo color("yellow","!] Silahkan input kembali\n");
+        echo color("yellow","[!] Silahkan input kembali\n");
         goto otp;
     }
                     
                 } else
                     {
-                        echo color("red","[x] Nomor sudah teregistrasi");
+                        echo color("red","[×] Nomor sudah teregistrasi");
                         echo"\n==================================\n\n";
-                        echo color("yellow","!] Silahkan registrasi kembali\n");
+                        echo color("yellow","[!] Silahkan registrasi kembali\n");
                         goto ulang;
                     }   
 
