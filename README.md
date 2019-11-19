@@ -8,10 +8,10 @@
 
   $pkg install git
 
-  $git clone https://github.com/megatruh/malproject
+  $git clone https://github.com/tzuyoon/gopro
 
 # use 
 
-$cd malproject
+$cd gopro
 
-$php alfood.php
+$php tzufood.php
