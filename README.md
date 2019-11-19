@@ -10,4 +10,5 @@ install
 
   $git clone https://github.com/megatruh/malproject
 
-use ~> $php jekfood.php
+use ~> $cd malproject
+       $php alfood.php
