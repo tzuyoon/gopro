@@ -67,7 +67,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                         } 
                         else 
                             {
-                                echo "\e[91m [×] Gagal Claim Voucer !"
+                                echo "\e[91m [×] Gagal Claim Voucer !";
                                     sleep(5);
                                     echo "\n";
 
@@ -86,7 +86,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                                         echo "\e[92m [✓]".$claims1->data->message."  [•] Tersimpan di ~> ".$live3;
                                                 } else 
                                                     {
-                                                        echo "\e[91m [×] Gagal Claim Voucer !"
+                                                        echo "\e[91m [×] Gagal Claim Voucer !";
                                                             sleep(5);
                                                             echo "\n";
 
@@ -105,7 +105,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                                                                 echo "\e[92m [✓]".$claims2->data->message." [•] Tersimpan di ~> ".$live4;
                                                                         } else 
                                                                             {
-                                                                                echo "\e[91m [×] Gagal Claim Voucer !"
+                                                                                echo "\e[91m [×] Gagal Claim Voucer !";
                                                                             }
 
                                                     }
@@ -123,7 +123,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                 echo "\e[92m [✓]".$claims3->data->message;
                         } else
                             {
-                                echo "\e[91m [×] Gagal Claim Voucer !"
+                                echo "\e[91m [×] Gagal Claim Voucer !";
 
                             }
                 sleep(5);
@@ -137,8 +137,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                 echo "\e[92m [✓]".$claims4->data->message;
                         } else
                             {
-                                echo "\e[91m [×] Gagal Claim Voucer !"
-
+                                echo "\e[91m [×] Gagal Claim Voucer !";
                             }
                     sleep(5);
                     echo "\n";
