@@ -9,15 +9,15 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 
         echo "\n";
         echo "\e[92m--------------------------------------------------\n";
-        echo "\e[92m|              SCRIPT BY ALFARKHAN               |\n";
-        echo "\e[92m|            Komunitas Tumbuh Bersama            |\n";
-        echo "\e[92m|     https://github.com/megatruh/malproject/    |\n";
+        echo "\e[92m|              SCRIPT BY TZUYOON.                |\n";
+        echo "\e[92m|            Kpopers, Gamers, GBLK.              |\n";
+        echo "\e[92m|     https://github.com/tzuyoon/gopro/          |\n";
         echo "\e[92m|   SCRIPT GOJEK AUTO REGIST + AUTO SAVE TOKEN   |\n";
         echo "\e[92m|                    GOODLUCK                    |\n";
         echo "\e[92m--------------------------------------------------\n";
         echo "\n";
         ulang:
-        echo "\e[96m[+] Input Nomor HP : ";
+        echo "\e[96m[+] Masukan Nomor HP : ";
         $number = trim(fgets(STDIN));
         $numbers = $number[0].$number[1];
         $numberx = $number[5];
@@ -35,7 +35,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
         // Verif OTP
         if($regs->success == true) {
             otp:
-            echo "\e[93m[+] Input OTP : ";
+            echo "\e[93m[+] Masukan Kode OTP : ";
             $otp = trim(fgets(STDIN));
             $data2 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $regs->data->otp_token . '"},"client_secret":"' . $secret . '"}';
             $verif = curl('https://api.gojekapi.com/v5/customers/phone/verify', $data2, $headers);
