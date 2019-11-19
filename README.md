@@ -1,6 +1,6 @@
 # Gojek Auto Register & Save Token 
 
-install
+# install
 
   $pkg install curl
 
@@ -10,5 +10,8 @@ install
 
   $git clone https://github.com/megatruh/malproject
 
-use ~> $cd malproject
-       $php alfood.php
+# use 
+
+$cd malproject
+
+$php alfood.php
