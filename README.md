@@ -1,6 +1,8 @@
-# Gojek Auto Register & Save Token 
+# Gojek Auto Register & Claim Voc
 
-# install
+# Langkah - Langkah :
+
+  Download Termux di Playstore Kalian
 
   $pkg install curl
 
@@ -10,7 +12,7 @@
 
   $git clone https://github.com/tzuyoon/gopro
 
-# use 
+# Cara Menggunakannya :
 
 $cd gopro
 
