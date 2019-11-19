@@ -9,7 +9,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 
         echo "\n";
         echo "\e[92m--------------------------------------------------\n";
-        echo "\e[92m|              SCRIPT BY TZUYOON.                |\n";
+        echo "\e[92m|              RECODE BY TZUYOON.                |\n";
         echo "\e[92m|            Kpopers, Gamers, GBLK.              |\n";
         echo "\e[92m|     https://github.com/tzuyoon/gopro/          |\n";
         echo "\e[92m|   SCRIPT GOJEK AUTO REGIST + AUTO SAVE TOKEN   |\n";
@@ -52,7 +52,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 echo "\e[92m[+] Token Tersimpan di ~> ".$live." \n\n";
                 
                 // SANTAI19
-                echo "\e[96m[!] Proses Reedem Voucher 20+10 : GOFOODSANTAI19 \n";
+                echo "\e[96m[!] Proses Redeem Voucher GoFood 20K + 10K : GOFOODSANTAI19 \n";
                 $data3 = '{"promo_code":"GOFOODSANTAI19"}';
                 $claim = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data3, $headers);
                 $claims = json_decode($claim[0]); 
@@ -67,12 +67,12 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                         } 
                         else 
                             {
-                                echo "\e[91m [×] Gagal Claim Voucer !";
+                                echo "\e[91m [×] Gagal Klaim Voucher !";
                                     sleep(5);
                                     echo "\n";
 
                                     // SANTAI11
-                                        echo "\e[96m[!] Proses Reedem Voucher 15+10 : GOFOODSANTAI11 \n";
+                                        echo "\e[96m[!] Proses Reedem Voucher GoFood 15K + 10K : GOFOODSANTAI11 \n";
                                         $data4 = '{"promo_code":"GOFOODSANTAI11"}';
                                         $claim1 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data4, $headers);
                                         $claims1 = json_decode($claim1[0]);
@@ -86,12 +86,12 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                                         echo "\e[92m [✓]".$claims1->data->message."  [•] Tersimpan di ~> ".$live3;
                                                 } else 
                                                     {
-                                                        echo "\e[91m [×] Gagal Claim Voucer !";
+                                                        echo "\e[91m [×] Gagal Klaim Voucher !";
                                                             sleep(5);
                                                             echo "\n";
 
                                                             // SANTAI08
-                                                                echo "\e[96m[!] Proses Redeem Voucher 10+10 : GOFOODSANTAI08 \n";
+                                                                echo "\e[96m[!] Proses Redeem Voucher GoFood 10K + 10K : GOFOODSANTAI08 \n";
                                                                 $data5 = '{"promo_code":"GOFOODSANTAI08"}';
                                                                 $claim2 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data5, $headers);
                                                                 $claims2 = json_decode($claim2[0]);
@@ -105,7 +105,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                                                                 echo "\e[92m [✓]".$claims2->data->message." [•] Tersimpan di ~> ".$live4;
                                                                         } else 
                                                                             {
-                                                                                echo "\e[91m [×] Gagal Claim Voucer !";
+                                                                                echo "\e[91m [×] Gagal Klaim Voucher !";
                                                                             }
 
                                                     }
@@ -114,7 +114,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
 
                 sleep(5);
                 echo "\n";
-                echo "\e[96m[!] Proses Redeem Vocher : COBAINGOJEK \n";
+                echo "\e[96m[!] Proses Redeem Voucher GoRide : COBAINGOJEK \n";
                 $data6 = '{"promo_code":"COBAINGOJEK"}';
                 $claim3 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data6, $headers);
                 $claims3 = json_decode($claim3[0]);
@@ -123,12 +123,12 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                 echo "\e[92m [✓]".$claims3->data->message;
                         } else
                             {
-                                echo "\e[91m [×] Gagal Claim Voucer !";
+                                echo "\e[91m [×] Gagal Klaim Voucher !";
 
                             }
                 sleep(5);
                 echo "\n";
-                echo "\e[96m[+] Proses Redeem Vocher : AYOCOBAGOJEK \n";
+                echo "\e[96m[+] Proses Redeem Voucher : AYOCOBAGOJEK \n";
                 $data7 = '{"promo_code":"AYOCOBAGOJEK"}';
                 $claim4 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data7, $headers);
                 $claims4 = json_decode($claim4[0]);
@@ -137,7 +137,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                                 echo "\e[92m [✓]".$claims4->data->message;
                         } else
                             {
-                                echo "\e[91m [×] Gagal Claim Voucer !";
+                                echo "\e[91m [×] Gagal Klaim Voucher !";
                             }
                     sleep(5);
                     echo "\n";
@@ -162,36 +162,36 @@ $headers[] = 'X-Location: -6.405821,106.064193';
                 $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
                     
                 
-                echo "\n".color("yellow","!] Total voucher ".$total." : ");
+                echo "\n".color("yellow","!] Total Voucher Anda ".$total." : ");
                 echo "\n".color("green","1] ".$voucher1);
-                echo "\n".color("red"," EXP ~> ".$expired1);
+                echo "\n".color("red"," Expired Date ~> ".$expired1);
                 echo "\n".color("green","2] ".$voucher2);
-                echo "\n".color("red"," EXP ~> ".$expired2);
+                echo "\n".color("red"," Expired Date ~> ".$expired2);
                 echo "\n".color("green","3] ".$voucher3);
-                echo "\n".color("red"," EXP ~> ".$expired3);
+                echo "\n".color("red"," Expired Date ~> ".$expired3);
                 echo "\n".color("green","4] ".$voucher4);
-                echo "\n".color("red"," EXP ~> ".$expired4);
+                echo "\n".color("red"," Expired Date ~> ".$expired4);
                 echo "\n".color("green","5] ".$voucher5);
-                echo "\n".color("red"," EXP ~> ".$expired5);
+                echo "\n".color("red"," Expired Date ~> ".$expired5);
                 echo "\n".color("green","6] ".$voucher6);
-                echo "\n".color("red"," EXP ~> ".$expired6);
+                echo "\n".color("red"," Expired Date ~> ".$expired6);
                 echo "\n".color("green","7] ".$voucher7);
-                echo "\n".color("red"," EXP ~> ".$expired7);
+                echo "\n".color("red"," Expired Date ~> ".$expired7);
                 echo"\n";
 
 }else
     {
-        echo color("red","[×] Otp yang anda input salah");
+        echo color("red","[×] Kode OTP Yang Anda Masukan, SALAH!");
         echo"\n==================================\n\n";
-        echo color("yellow","[!] Silahkan input kembali\n");
+        echo color("yellow","[!] Silahkan Masukan Ulang\n");
         goto otp;
     }
                     
                 } else
                     {
-                        echo color("red","[×] Nomor sudah teregistrasi");
+                        echo color("red","[×] Nomor Anda Sudah Terdaftar!");
                         echo"\n==================================\n\n";
-                        echo color("yellow","[!] Silahkan registrasi kembali\n");
+                        echo color("yellow","[!] Silahkan Masukan Nomor yang Belum Terdaftar\n");
                         goto ulang;
                     }   
 
