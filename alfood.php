@@ -10,6 +10,7 @@ $headers[] = 'X-Location: -6.405821,106.064193';
         echo "\n";
         echo "\e[92m--------------------------------------------------\n";
         echo "\e[92m|              SCRIPT BY ALFARKHAN               |\n";
+        echo "\e[92m|            Komunitas Tumbuh Bersama            |\n";
         echo "\e[92m|     https://github.com/megatruh/malproject/    |\n";
         echo "\e[92m|   SCRIPT GOJEK AUTO REGIST + AUTO SAVE TOKEN   |\n";
         echo "\e[92m|                    GOODLUCK                    |\n";
